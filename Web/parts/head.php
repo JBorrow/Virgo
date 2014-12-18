@@ -7,6 +7,8 @@
 
 <title>Virgo Consortium | Supercomputer Simulations</title>
 
+<link rel='icon' href='favicon.ico' type='image/x-icon'/>
+
 <link href='bootstrap/css/bootstrap.min.css' rel='stylesheet' />
 <!--- Bootstrap Theme -->
 <link href='bootstrap/css/bootstrap-theme.min.css' rel='stylesheet' />
