@@ -9,7 +9,7 @@ function navbar_gen($page_list=array('Home'), $path_list=array('index.php'),
 		$class = $initial_class;
 		$page = $page_list[$i];
 		$path = $path_list[$i];
-		if ($page == $this_page) {
+		if (strtolower($page) == strtolower($this_page)) {
 			$class .= ' active';
 		}
 		$navbar_list .= "<li class='$class'><a href='$path'>$page</a></li>";

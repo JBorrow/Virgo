@@ -5,10 +5,19 @@
 
 global $page_content;
 global $id;
+global $page_list;
+global $path_list;
+global $this_page;
 
-if (isset($_GET[$id])) {
-	$id = $_GET[$id];
+$page_list = array('Home', 'Projects');
+$path_list = array('index.php?id=home', 'index.php?id=projects');
+
+if (isset($_GET['id'])) {
+	$id = $_GET['id'];
+	$this_page = $id;
 } else {
 	$id = 'home';
+	$this_page = 'home';
 }
+
 $page_content = grab_page($id);
