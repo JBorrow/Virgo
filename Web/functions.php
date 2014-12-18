@@ -3,7 +3,7 @@
 function navbar_gen($page_list=array('Home'), $path_list=array('index.php'),
 					$this_page='Home', $initial_class='')
 {
-	// Generates the navbar with the correct classes if this is the correct page
+	// Generates the navbar with the correct classes e.g. active page
 	$navbar_list = "";
 	for ($i=0; $i<count($page_list); $i++) {
 		$class = $initial_class;
@@ -11,8 +11,6 @@ function navbar_gen($page_list=array('Home'), $path_list=array('index.php'),
 		$path = $path_list[$i];
 		if ($page == $this_page) {
 			$class .= ' active';
-		} else {
-			continue;
 		}
 		$navbar_list .= "<li class='$class'><a href='$path'>$page</a></li>";
 	}
@@ -46,6 +44,6 @@ function page_list($path='content')
 function grab_page($id, $path='content')
 {
 	// gets the page content from page id
-	include_once("$path/$id.php");
+	include_once("$path/$id/$id.php");
 	return read_page("$path/$id/$id.html");
 }
