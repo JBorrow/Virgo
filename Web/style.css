@@ -1,4 +1,23 @@
+/* because we are using fixed navbar */
+
+body {
+	padding-top: 70px;
+}
+
+nav {
+	opacity:0.9;
+}
+
 .navbar-brand img {
 	max-width:100px;
 	margin-top:-2px;  /* vertically center */
 }
+
+.eagle {
+	/* jumbotron styling for homepage */
+	background-image:url(headimg.png);
+	background-size:auto 100%;
+	color:white;
+}
+
+

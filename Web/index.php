@@ -6,7 +6,9 @@
 	</head>
 
 	<body>
-		<?php include_once('parts/navbar.php');
+		<?php 
+		include_once('parts/top.php');
+		include_once('parts/navbar.php');
 		echo $page_content;
 		include_once('parts/footer.php'); ?>
 	</body>

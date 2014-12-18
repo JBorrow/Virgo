@@ -1,21 +1,22 @@
 <?php
 
 function navbar_gen($page_list=array('Home'), $path_list=array('index.php'),
-					$this_page='Home')
+					$this_page='Home', $initial_class='')
 {
 	// Generates the navbar with the correct classes if this is the correct page
-	$navbar = "";
+	$navbar_list = "";
 	for ($i=0; $i<count($page_list); $i++) {
+		$class = $initial_class;
 		$page = $page_list[$i];
 		$path = $path_list[$i];
 		if ($page == $this_page) {
-			$class = 'active';
+			$class .= ' active';
 		} else {
-			$class = '';
+			continue;
 		}
-		$navbar .= "<li class='$class'><a href='$path'>$page</a></li>";
+		$navbar_list .= "<li class='$class'><a href='$path'>$page</a></li>";
 	}
-	return $navbar;
+	return $navbar_list;
 }
 
 function read_page($path, $max_char=10000)
