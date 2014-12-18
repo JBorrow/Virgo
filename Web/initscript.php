@@ -6,5 +6,9 @@
 global $page_content;
 global $id;
 
-$id = $_GET[$id];
+if (isset($_GET[$id])) {
+	$id = $_GET[$id];
+} else {
+	$id = 'home';
+}
 $page_content = grab_page($id);
