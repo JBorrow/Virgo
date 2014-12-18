@@ -9,8 +9,8 @@ global $page_list;
 global $path_list;
 global $this_page;
 
-$page_list = array('Home', 'Projects');
-$path_list = array('index.php?id=home', 'index.php?id=projects');
+$page_list = array('Home', 'Current Projects');
+$path_list = array('index.php?id=home', 'index.php?id=current_projects');
 
 if (isset($_GET['id'])) {
 	$id = $_GET['id'];

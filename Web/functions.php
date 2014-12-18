@@ -8,8 +8,9 @@ function navbar_gen($page_list=array('Home'), $path_list=array('index.php'),
 	for ($i=0; $i<count($page_list); $i++) {
 		$class = $initial_class;
 		$page = $page_list[$i];
+		$page_test = strtolower(str_replace(" ", "_", $page));
 		$path = $path_list[$i];
-		if (strtolower($page) == strtolower($this_page)) {
+		if ($this_page == $page_test) {
 			$class .= ' active';
 		}
 		$navbar_list .= "<li class='$class'><a href='$path'>$page</a></li>";
